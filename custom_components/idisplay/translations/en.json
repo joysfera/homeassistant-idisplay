@@ -1,0 +1,28 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "iDisplay Connection",
+        "data": {
+          "user_login": "Enter your login to iDisplay.cz/Teploty.info"
+        }
+      }
+    },
+    "error": {
+      "no_login_provided": "No login provided"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "iDisplay Options",
+        "data": {
+          "user_login": "Enter your login to iDisplay.cz/Teploty.info"
+        }
+      }
+    },
+    "error": {
+      "no_login_provided": "No login provided"
+    }
+  }
+}

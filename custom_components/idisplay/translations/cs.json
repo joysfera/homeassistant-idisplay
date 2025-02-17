@@ -1,0 +1,28 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Připojení iDisplay",
+        "data": {
+          "user_login": "Zadejte vaše přihlašovací jméno na iDisplej.cz/Teploty.info"
+        }
+      }
+    },
+    "error": {
+      "no_login_provided": "Přihlašovací jméno nebylo zadáno"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Nastavení iDisplay",
+        "data": {
+          "user_login": "Zadejte vaše přihlašovací jméno na iDisplej.cz/Teploty.info"
+        }
+      }
+    },
+    "error": {
+      "no_login_provided": "Přihlašovací jméno nebylo zadáno"
+    }
+  }
+}

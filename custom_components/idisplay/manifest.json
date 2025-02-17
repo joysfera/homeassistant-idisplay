@@ -1,0 +1,13 @@
+{
+  "domain": "idisplay",
+  "name": "iDisplay",
+  "version": "1.0",
+  "documentation": "https://github.com/your-repo/idisplay",
+  "dependencies": [],
+  "codeowners": ["@joysfera"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "config_flow": true,
+  "config_flow_supports_multiple_instances": false,
+  "single_config_entry": true
+}

@@ -1,0 +1,8 @@
+{
+  "name": "iDisplay",
+  "render_readme": true,
+  "content_in_root": false,
+  "domains": ["idisplay"],
+  "country": "CZ",
+  "homeassistant": "2023.7.0"
+}
