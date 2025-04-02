@@ -9,6 +9,9 @@ from datetime import timedelta
 
 from .const import DOMAIN, CONF_USER_LOGIN, CONF_SERVER_URL, CONF_INTERVAL
 
+# Define that this integration is set up via config entries only
+CONFIG_SCHEMA = cv.config_entry_only_config_schema("idisplay")
+
 _LOGGER = logging.getLogger(__name__)
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
