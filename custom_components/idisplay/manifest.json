@@ -1,13 +1,13 @@
 {
   "domain": "idisplay",
   "name": "iDisplay",
-  "version": "1.0",
-  "documentation": "https://github.com/joysfera/homeassistant-idisplay",
-  "dependencies": [],
   "codeowners": ["@joysfera"],
-  "requirements": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/joysfera/homeassistant-idisplay",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/joysfera/homeassistant-idisplay/issues",
-  "config_flow": true,
-  "single_config_entry": true
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "1.0"
 }
