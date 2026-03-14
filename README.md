@@ -19,7 +19,7 @@ Get your iDisplay or WiFi Display at [iDisplay.cz](https://idisplej.cz/)
 
 ### Manual
 
-1. Copy `custom_components/smart_energy_manager/` to your HA `custom_components/` directory
+1. Copy `custom_components/idisplay/` to your HA `custom_components/` directory
 2. Restart Home Assistant
 3. Add the integration via Settings > Devices & Services
 
