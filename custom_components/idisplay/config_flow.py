@@ -25,7 +25,7 @@ class IDisplayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         # Build the form schema
         schema = vol.Schema({
-            vol.Required(CONF_USER_LOGIN, description={"suggested_value": self.config_entry.data.get(CONF_USER_LOGIN, "")}): str,
+            vol.Required(CONF_USER_LOGIN, description={"suggested_value": getattr(self, 'config_entry', None) and self.config_entry.data.get(CONF_USER_LOGIN, "") or ""}): str,
         })
 
         return self.async_show_form(
