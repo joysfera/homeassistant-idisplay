@@ -26,4 +26,4 @@ Either click on this button
 
 # Configuration
 
-1. Enter your Teploty.info login name
+When the iDisplay integration asks, enter there your Teploty.info login name
