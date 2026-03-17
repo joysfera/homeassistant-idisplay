@@ -49,7 +49,7 @@ class IDisplayOptionsFlow(config_entries.OptionsFlow):
 
     def __init__(self, config_entry):
         """Initialize options flow."""
-        self.config_entry = config_entry
+        self._config_entry = config_entry  # Use private attribute to avoid conflict with HA base property
 
     async def async_step_init(self, user_input=None):
         """Manage the options."""
@@ -62,9 +62,9 @@ class IDisplayOptionsFlow(config_entries.OptionsFlow):
             else:
                 return self.async_create_entry(title="", data={CONF_USER_LOGIN: login})
 
-        current_login = self.config_entry.options.get(
+        current_login = self._config_entry.options.get(
             CONF_USER_LOGIN,
-            self.config_entry.data.get(CONF_USER_LOGIN, "")
+            self._config_entry.data.get(CONF_USER_LOGIN, "")
         )
 
         schema = vol.Schema({
