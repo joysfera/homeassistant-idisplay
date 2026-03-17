@@ -10,12 +10,13 @@ Get your iDisplay or WiFi Display at [iDisplay.cz](https://idisplej.cz/)
 
 ### HACS (Recommended)
 
+Either click on this button
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=joysfera&repository=homeassistant-idisplay&category=integration)  or follow the steps below:
+
 1. Add this repository to HACS as a custom repository
 2. Search for "iDisplay" and install
 3. Restart Home Assistant
-4. Go to Settings > Devices & Services > Add Integration > iDisplay
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=joysfera&repository=homeassistant-idisplay&category=integration)
+4. Go to Settings > Devices & Services, click Add Integration and select iDisplay
 
 ### Manual
 
@@ -23,6 +24,6 @@ Get your iDisplay or WiFi Display at [iDisplay.cz](https://idisplej.cz/)
 2. Restart Home Assistant
 3. Add the integration via Settings > Devices & Services
 
-## Configuration
+# Configuration
 
 1. Enter your Teploty.info login name
