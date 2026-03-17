@@ -4,7 +4,7 @@ Just install it, configure with your login name and that's it.
 
 Get your iDisplay or WiFi Display at [iDisplay.cz](https://idisplej.cz/)
 
-<img src="https://idisplej.cz/assets/cidla.jpg" style="max-width:200px;" alt="iDisplay">
+<img src="https://idisplej.cz/assets/cidla.jpg" width=300 alt="iDisplay">
 
 # Installation
 
