@@ -25,4 +25,4 @@ Get your iDisplay or WiFi Display at [iDisplay.cz](https://idisplej.cz/)
 
 ## Configuration
 
-1. Enter your Teploty.info credentials (login name and password)
+1. Enter your Teploty.info login name
