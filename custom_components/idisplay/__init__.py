@@ -5,6 +5,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers import config_validation as cv
 from datetime import timedelta
 
 from .const import DOMAIN, CONF_USER_LOGIN, CONF_SERVER_URL, CONF_INTERVAL
