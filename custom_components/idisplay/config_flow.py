@@ -10,22 +10,25 @@ class IDisplayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for iDisplay."""
 
     VERSION = 1
-    CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL
 
     async def async_step_user(self, user_input=None):
         """Handle the initial step."""
         errors = {}
 
         if user_input is not None:
-            # Validate user input
-            if not user_input[CONF_USER_LOGIN]:
-                errors["base"] = "no_login_provided"
+            login = user_input.get(CONF_USER_LOGIN, "").strip()
+            if not login:
+                errors[CONF_USER_LOGIN] = "no_login_provided"
             else:
-                return self.async_create_entry(title="iDisplay", data=user_input)
+                await self.async_set_unique_id(login)
+                self._abort_if_unique_id_configured()
+                return self.async_create_entry(
+                    title=login,
+                    data={CONF_USER_LOGIN: login},
+                )
 
-        # Build the form schema
         schema = vol.Schema({
-            vol.Required(CONF_USER_LOGIN, description={"suggested_value": getattr(self, 'config_entry', None) and self.config_entry.data.get(CONF_USER_LOGIN, "") or ""}): str,
+            vol.Required(CONF_USER_LOGIN): str,
         })
 
         return self.async_show_form(
@@ -40,6 +43,7 @@ class IDisplayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         """Get the options flow for this handler."""
         return IDisplayOptionsFlow(config_entry)
 
+
 class IDisplayOptionsFlow(config_entries.OptionsFlow):
     """Handle an options flow for iDisplay."""
 
@@ -52,15 +56,19 @@ class IDisplayOptionsFlow(config_entries.OptionsFlow):
         errors = {}
 
         if user_input is not None:
-            # Validate user input
-            if not user_input[CONF_USER_LOGIN]:
-                errors["base"] = "no_login_provided"
+            login = user_input.get(CONF_USER_LOGIN, "").strip()
+            if not login:
+                errors[CONF_USER_LOGIN] = "no_login_provided"
             else:
-                return self.async_create_entry(title="", data=user_input)
+                return self.async_create_entry(title="", data={CONF_USER_LOGIN: login})
 
-        # Build the form schema
+        current_login = self.config_entry.options.get(
+            CONF_USER_LOGIN,
+            self.config_entry.data.get(CONF_USER_LOGIN, "")
+        )
+
         schema = vol.Schema({
-            vol.Required(CONF_USER_LOGIN, default=self.config_entry.data[CONF_USER_LOGIN]): str,
+            vol.Required(CONF_USER_LOGIN, default=current_login): str,
         })
 
         return self.async_show_form(
